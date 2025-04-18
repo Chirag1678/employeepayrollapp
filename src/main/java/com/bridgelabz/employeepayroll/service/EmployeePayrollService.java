@@ -9,4 +9,5 @@ public interface EmployeePayrollService {
     ResponseDTO getEmployeeById(long employeeId);
     ResponseDTO deleteEmployee(long employeeId);
     ResponseDTO getAllEmployees();
+    ResponseDTO getAllEmployeesByDepartment(String department);
 }

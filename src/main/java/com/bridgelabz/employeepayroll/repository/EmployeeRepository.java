@@ -9,9 +9,9 @@ import java.util.Optional;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
-    // Find single employee by exact name
+    // Find a single employee by exact name
     Optional<Employee> findByName(String name);
 
-    // OR, if multiple employees can have same name
-    List<Employee> findAllByName(String name);
+    // Find employees by department
+    List<Employee> findAllByDepartment(String department);
 }
