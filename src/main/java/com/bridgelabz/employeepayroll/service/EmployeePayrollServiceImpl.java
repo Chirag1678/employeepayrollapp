@@ -21,7 +21,7 @@ public class EmployeePayrollServiceImpl implements EmployeePayrollService {
     public ResponseDTO createEmployee(EmployeeDTO employeeDTO) {
         Employee employee = new Employee(employeeDTO.getName(), employeeDTO.getSalary());
         employeeRepository.save(employee);
-        return new ResponseDTO("Created Employee payroll data successfully", HttpStatus.CREATED , employee);
+        return new ResponseDTO("Created Employee payroll data successfully", HttpStatus.CREATED.value() , employee);
     }
 
     // method to get employee data based on id
@@ -29,9 +29,9 @@ public class EmployeePayrollServiceImpl implements EmployeePayrollService {
     public ResponseDTO getEmployeeById(long employeeId) {
         Optional<Employee> optionalEmployee = employeeRepository.findById(employeeId);
         if(optionalEmployee.isPresent()) {
-            return new ResponseDTO("Employee fetched successfully", HttpStatus.OK, optionalEmployee);
+            return new ResponseDTO("Employee fetched successfully", HttpStatus.OK.value(), optionalEmployee);
         } else {
-            return new ResponseDTO("Employee not found", HttpStatus.NOT_FOUND, null);
+            return new ResponseDTO("Employee not found", HttpStatus.NOT_FOUND.value(), null);
         }
     }
 
@@ -47,9 +47,9 @@ public class EmployeePayrollServiceImpl implements EmployeePayrollService {
 
             employeeRepository.save(updatedEmployee);
 
-            return new ResponseDTO("Employee data updated successfully", HttpStatus.OK, updatedEmployee);
+            return new ResponseDTO("Employee data updated successfully", HttpStatus.OK.value(), updatedEmployee);
         } else {
-            return new ResponseDTO("Employee not found", HttpStatus.NOT_FOUND, null);
+            return new ResponseDTO("Employee not found", HttpStatus.NOT_FOUND.value(), null);
         }
     }
 
@@ -63,9 +63,9 @@ public class EmployeePayrollServiceImpl implements EmployeePayrollService {
 
             employeeRepository.delete(deletedEmployee);
 
-            return new ResponseDTO("Employee deleted successfully", HttpStatus.OK, deletedEmployee);
+            return new ResponseDTO("Employee deleted successfully", HttpStatus.OK.value(), deletedEmployee);
         } else {
-            return new ResponseDTO("Employee not found", HttpStatus.NOT_FOUND, null);
+            return new ResponseDTO("Employee not found", HttpStatus.NOT_FOUND.value(), null);
         }
     }
 
@@ -74,6 +74,6 @@ public class EmployeePayrollServiceImpl implements EmployeePayrollService {
     public ResponseDTO getAllEmployees() {
         List<Employee> allEmployees = employeeRepository.findAll();
 
-        return new ResponseDTO("Employees fetched successfully", HttpStatus.OK, allEmployees);
+        return new ResponseDTO("Employees fetched successfully", HttpStatus.OK.value(), allEmployees);
     }
 }

@@ -1,0 +1,6 @@
+2025-04-18T09:31:39.015+05:30  INFO 38504 --- [EmployeePayroll] [main] c.b.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 20.0.2 with PID 38504 (/Users/chiraggarg/bridgelabz-workspace/6-Java-Backend-Spring-Boot/employeepayroll/target/classes started by chiraggarg in /Users/chiraggarg/bridgelabz-workspace/6-Java-Backend-Spring-Boot/employeepayroll)
+2025-04-18T09:31:39.016+05:30 DEBUG 38504 --- [EmployeePayroll] [main] c.b.e.EmployeePayrollApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-18T09:31:39.016+05:30  INFO 38504 --- [EmployeePayroll] [main] c.b.e.EmployeePayrollApplication         : The following 1 profile is active: "dev"
+2025-04-18T09:31:40.754+05:30  WARN 38504 --- [EmployeePayroll] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-18T09:31:40.932+05:30  INFO 38504 --- [EmployeePayroll] [main] c.b.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 2.18 seconds (process running for 2.441)
+2025-04-18T09:31:40.933+05:30  INFO 38504 --- [EmployeePayroll] [main] c.b.e.EmployeePayrollApplication         : Employee Payroll App started!!
