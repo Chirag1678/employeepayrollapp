@@ -3,7 +3,6 @@ package com.bridgelabz.employeepayroll.dto;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.ToString;
 import org.hibernate.validator.constraints.URL;
 

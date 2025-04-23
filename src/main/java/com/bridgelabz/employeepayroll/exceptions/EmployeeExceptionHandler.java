@@ -17,6 +17,7 @@ import java.util.List;
 @ControllerAdvice
 public class EmployeeExceptionHandler {
     private static final String message = "Exception while processing REST Request";
+
     @ExceptionHandler(HttpMessageNotReadableException.class)
     public ResponseEntity<ResponseDTO> handleHttpMessageNotReadableException(HttpMessageNotReadableException e) {
         log.error("Invalid Date format", e);
